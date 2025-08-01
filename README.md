@@ -144,5 +144,4 @@ This program is free software: you can redistribute it and/or modify it under th
 
 Feel free to reach out if you have any questions, feedback, or collaboration ideas:
 
-* 📧 Email: [yashthakur2603@gmail.com](mailto:yashthakur2603@gmail.com)
 * 🐙 GitHub: [@yashthakur2603](https://github.com/yashthakur2603)
