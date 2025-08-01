@@ -1,1 +1,88 @@
+# Customer Churn Prediction (CDAC Final Project)
 
+This project analyzes telecom customer data to predict churn — identifying customers likely to leave the service. The goal is to build interpretable and high-performance machine learning models aligned with the CDAC PG-DBDA syllabus.
+
+---
+
+## Dataset
+
+- File: `Cdac_Customer_Churn.csv`
+- Rows: ~99,800
+- Target Column: `Churn` (0 = No, 1 = Yes)
+- Source: Simulated Telco dataset
+
+---
+
+## Project Workflow
+
+### 1. Data Cleaning
+- Converted `TotalCharges` to numeric
+- Dropped rows with missing values
+- Checked column-wise unique values
+
+### 2. Feature Engineering
+- Encoded binary columns (`Yes`/`No`, `Male`/`Female`)
+- One-hot encoded multi-category columns (e.g., `Contract`, `InternetService`)
+- Scaled numeric features using `StandardScaler`
+
+### 3. Model Training
+The following models were trained and evaluated:
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- XGBoost
+
+### 4. Evaluation Metrics
+- Confusion Matrix
+- Precision, Recall, F1-score
+- ROC AUC Score
+- Log Loss
+
+---
+
+## Business Insights
+
+- Churn is highest among customers on **month-to-month contracts** with **fiber optic internet** and **no tech support**
+- Adding tech support and moving customers to longer contracts could improve retention
+
+---
+
+## Libraries Used
+
+- pandas, numpy
+- matplotlib, seaborn
+- scikit-learn
+- xgboost
+
+---
+
+## How to Run
+
+```bash
+# 1. Install requirements
+pip install pandas scikit-learn xgboost matplotlib seaborn
+
+# 2. Run the notebook (Colab/Jupyter)
+````
+
+---
+
+## Future Enhancements
+
+* Streamlit app for real-time churn prediction
+* Model performance comparison charts
+* Customer segmentation using KMeans clustering
+
+---
+
+## License
+
+This project is for academic purposes under CDAC PG-DBDA curriculum. Free to use and extend for learning.
+
+---
+
+## Author
+
+**Yash Thakur**
+GitHub: https://github.com/yashthakur2603
+LinkedIn: 
