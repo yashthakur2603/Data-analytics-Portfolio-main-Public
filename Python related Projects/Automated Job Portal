@@ -1,1 +1,113 @@
+# 1. Import required libraries
+import smtplib
+from email.mime.text import MIMEText
+from jinja2 import Template
+import pandas as pd
+import time
+
+# 2. Load your Excel file
+df = pd.read_excel('/content/Yashcontent1july25_HR_Contacts_UTF8.xlsx')
+
+# 3. Define your email template using Jinja2 placeholders
+template_text = """Subject: Exploring Collaboration Opportunities
+
+Hi {{ name }},
+
+I hope you're doing well. I’m reaching out to explore potential collaboration opportunities with {{ company }} where I believe my skills and experience could be a strong fit.
+
+Looking forward to connecting with you.
+
+Thanks & Regards,  
+Yash Thakur
+"""
+
+# 4. Compile the template
+template = Template(template_text)
+
+# 5. Batching logic — send 10 emails at a time
+batch_size = 10
+start = 0  # Change this to 10, 20, 30... for each new batch
+end = start + batch_size
+
+# 6. Loop through only the current batch
+for index, row in df[start:end].iterrows():
+    try:
+        # Connect to Gmail SMTP
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login("yashautomationthakur@gmail.com", "juxiqvfejkaixrly")  # Use your App Password here
+
+        # Personalize the message using Jinja2
+        body = template.render(name=row["Name"], company=row["Company"])
+        msg = MIMEText(body, "plain")
+        msg["Subject"] = "Exploring Collaboration Opportunities"
+        msg["From"] = "yashautomationthakur@gmail.com"
+        msg["To"] = row["Email"]
+
+        # Send the email
+        print(f"Sending to: {row['Name']} <{row['Email']}>")
+        server.sendmail(msg["From"], [msg["To"]], msg.as_string())
+        server.quit()
+
+        # Wait between sends to avoid throttling
+        time.sleep(2)
+
+    except Exception as e:
+        print(f"Failed to send to {row['Email']}: {e}")
+# 1. Import required libraries
+import smtplib
+from email.mime.text import MIMEText
+from jinja2 import Template
+import pandas as pd
+import time
+
+# 2. Load your Excel file
+df = pd.read_excel('/content/Yashcontent1july25_HR_Contacts_UTF8.xlsx')
+
+# 3. Define your email template using Jinja2 placeholders
+template_text = """Subject: Exploring Collaboration Opportunities
+
+Hi {{ name }},
+
+I hope you're doing well. I’m reaching out to explore potential collaboration opportunities with {{ company }} where I believe my skills and experience could be a strong fit.
+
+Looking forward to connecting with you.
+
+Thanks & Regards,  
+Yash Thakur
+"""
+
+# 4. Compile the template
+template = Template(template_text)
+
+# 5. Batching logic — send 10 emails at a time
+batch_size = 10
+start = 0  # Change this to 10, 20, 30... for each new batch
+end = start + batch_size
+
+# 6. Loop through only the current batch
+for index, row in df[start:end].iterrows():
+    try:
+        # Connect to Gmail SMTP
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login("yashautomationthakur@gmail.com", "juxiqvfejkaixrly")  # Use your App Password here
+
+        # Personalize the message using Jinja2
+        body = template.render(name=row["Name"], company=row["Company"])
+        msg = MIMEText(body, "plain")
+        msg["Subject"] = "Exploring Collaboration Opportunities"
+        msg["From"] = "yashautomationthakur@gmail.com"
+        msg["To"] = row["Email"]
+
+        # Send the email
+        print(f"Sending to: {row['Name']} <{row['Email']}>")
+        server.sendmail(msg["From"], [msg["To"]], msg.as_string())
+        server.quit()
+
+        # Wait between sends to avoid throttling
+        time.sleep(2)
+
+    except Exception as e:
+        print(f"Failed to send to {row['Email']}: {e}")
 
