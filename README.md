@@ -1,7 +1,3 @@
-Here's an improved version of your GitHub repository's README file. It's more polished, professional, and user-friendly, with consistent formatting, clearer instructions, and a refined tone:
-
----
-
 # 📊 Data Insights Portfolio
 
 Welcome to my **Data Insights Portfolio** – a curated collection of real-world data analysis projects. This repository highlights my end-to-end data skills, from data cleaning and preprocessing to analysis, visualization, and predictive modeling.
@@ -150,7 +146,3 @@ Feel free to reach out if you have any questions, feedback, or collaboration ide
 
 * 📧 Email: [yashthakur2603@gmail.com](mailto:yashthakur2603@gmail.com)
 * 🐙 GitHub: [@yashthakur2603](https://github.com/yashthakur2603)
-
----
-
-Let me know if you'd like help writing individual project READMEs or creating a `requirements.txt` file.
