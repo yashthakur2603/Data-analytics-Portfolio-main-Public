@@ -1,1 +1,113 @@
+PRDA-02 CSAT Analytics Project
 
+🔍 Objective
+
+Analyze customer service call data to uncover insights that improve customer satisfaction (CSAT), response time, and overall service quality.
+
+📁 Dataset Overview
+
+Records: ~32,942
+
+Columns: 12
+
+id
+
+customer_name
+
+sentiment
+
+csat_score
+
+call_timestamp
+
+Call_Day
+
+reason
+
+city
+
+state
+
+channel
+
+response_time
+
+call_duration_in_minutes
+
+✅ Project Tasks Breakdown
+
+1. Data Extraction
+
+Connected to MySQL database project_csat_analytics
+
+Exported csat table as UTF-8 CSV using MySQL Workbench
+
+2. Call Trend (Line Chart)
+
+Parsed call_timestamp to datetime
+
+Extracted call_date
+
+Grouped by date and plotted a line chart
+
+3. Channel Distribution (Doughnut Chart)
+
+Counted values in channel
+
+Created doughnut chart using matplotlib
+
+4. State-wise Call Volume (Map / Bar Chart)
+
+Grouped by state
+
+Visualized top 10 states in horizontal bar chart using Python
+
+Additional visualization built in Power BI / Tableau (Filled Map)
+
+5. Reason for Call (Column Chart)
+
+Pending: To be implemented next
+
+6. Response Time Distribution (Bar Chart)
+
+Pending: To be implemented next
+
+7. Feature Analysis and Insights
+
+Pending: To be summarized after full EDA
+
+8. Dashboard and Business Recommendations
+
+Planned: Will build interactive dashboard in Tableau / Power BI
+
+🛠️ Tools Used
+
+Python (pandas, matplotlib, seaborn)
+
+MySQL Workbench
+
+Power BI / Tableau
+
+📌 Example Insights (So Far)
+
+Call Center is the most used channel (10,639 calls)
+
+Maharashtra leads in total call volume across states
+
+Consistent increase in call volume observed on certain weekdays
+
+📦 Deliverables
+
+Cleaned dataset (csat_data_cleaned.csv)
+
+Python notebook for EDA and visualization
+
+Power BI / Tableau dashboard
+
+PPT presentation with insights and suggestions
+
+🧠 Author
+
+Yash Thakur
+Business Data Analyst | Data Science
+https://github.com/yashthakur2603
